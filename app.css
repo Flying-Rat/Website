@@ -6,12 +6,48 @@
     --background-image-light: url('assets/rat-light.png');
 }
 
+/* Hand wave animation inspired by belev.dev, thanks! */
+@keyframes hand-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(16deg);
+    }
+
+    20% {
+        transform: rotate(-6deg);
+    }
+
+    30% {
+        transform: rotate(16deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(16deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: Sans-Serif;
 }
 
 #app {
@@ -24,10 +60,36 @@ body {
     background-position: center center;
 }
 
+#footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+#footer>a {
+    text-decoration: none;
+}
+
+#footer>a:hover {
+    text-decoration: underline;
+}
+
+#footer-hand-wave {
+    animation: hand-wave 3.0s 1.0s infinite;
+    transform-origin: 75% 75%;
+    display: inline-block;
+}
+
 @media (prefers-color-scheme: dark) {
     #app {
         background-color: var(--background-color-dark);
         background-image: var(--background-image-dark);
+    }
+
+    #footer>a {
+        color: var(--background-color-light);
     }
 }
 
@@ -35,5 +97,9 @@ body {
     #app {
         background-color: var(--background-color-light);
         background-image: var(--background-image-light);
+    }
+
+    #footer>a {
+        color: var(--background-color-dark);
     }
 }
