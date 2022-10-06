@@ -1,9 +1,9 @@
 :root {
     --background-color-dark: #1d1d21;
-    --background-image-dark: url('assets/rat-dark.png');
+    --background-image-dark: url('assets/rat-dark-transparent.png');
 
     --background-color-light: #dcdce1;
-    --background-image-light: url('assets/rat-light.png');
+    --background-image-light: url('assets/rat-light-transparent.png');
 }
 
 /* Hand wave animation inspired by belev.dev, thanks! */
